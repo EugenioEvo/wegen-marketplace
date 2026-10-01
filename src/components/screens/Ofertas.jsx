@@ -47,7 +47,8 @@ export default function Ofertas({
     (o) =>
       passDist(o) &&
       Math.round(o.pct * 100) >= ecoMin &&
-      (ratingMin == null || o.rating >= ratingMin) &&
+      // oferta sem avaliações ainda ("nova") não é punida pelo filtro de nota
+      (ratingMin == null || !o.reviews || o.rating >= ratingMin) &&
       (!limpaOnly || o.limpa),
   )
 

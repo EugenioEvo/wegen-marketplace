@@ -110,6 +110,9 @@ export default function App() {
         setConfirmToken(tk)
         setScreen('confirmar')
       }
+      // Volta do link de confirmação de e-mail do Supabase (#access_token...&type=signup):
+      // o supabase-js consome o token e loga; aqui só damos as boas-vindas.
+      if (/type=signup/.test(window.location.hash)) setScreen('bemvindo')
     } catch {
       /* ignore */
     }
@@ -489,6 +492,27 @@ export default function App() {
         {screen === 'empresa' && <MercadoLivre nav={nav} onSubmit={submitEmpresaLead} />}
 
         {screen === 'confirmar' && <ConfirmarConversao nav={nav} token={confirmToken} />}
+
+        {screen === 'bemvindo' && (
+          <section className="mx-auto max-w-[520px] px-6 py-24 text-center">
+            <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-green-50">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#15B86A" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M20 6 9 17l-5-5" />
+              </svg>
+            </span>
+            <h1 className="mt-5 text-[26px] font-bold text-brand-900">E-mail confirmado!</h1>
+            <p className="mx-auto mt-3 max-w-[400px] text-[15px] leading-[1.55] text-slate-500">
+              Sua conta de ofertante está ativa{session ? ' e você já está conectado' : ''}. Crie sua
+              primeira oferta e comece a receber leads.
+            </p>
+            <button
+              onClick={nav.goPainel}
+              className="mt-6 cursor-pointer rounded-xl border-none bg-brand-600 px-6 py-3 text-[15px] font-semibold text-white hover:bg-brand-700"
+            >
+              Ir para o meu painel
+            </button>
+          </section>
+        )}
 
         {screen === 'ofertas' && (
           <Ofertas

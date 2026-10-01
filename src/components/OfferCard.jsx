@@ -27,9 +27,17 @@ export default function OfferCard({ offer, conta, faved, compared, onContact, on
 
       {/* Avaliação */}
       <div className="mt-3 flex items-center gap-[6px]">
-        <span className="text-sm text-solar-400">★</span>
-        <span className="text-sm font-bold text-slate-900">{ratingFmt(offer.rating)}</span>
-        <span className="text-[12.5px] text-slate-400">({offer.reviews} avaliações)</span>
+        {offer.reviews > 0 ? (
+          <>
+            <span className="text-sm text-solar-400">★</span>
+            <span className="text-sm font-bold text-slate-900">{ratingFmt(offer.rating)}</span>
+            <span className="text-[12.5px] text-slate-400">({offer.reviews} avaliações)</span>
+          </>
+        ) : (
+          <span className="rounded-full bg-brand-50 px-[9px] py-[3px] text-[11.5px] font-bold text-brand-600">
+            Nova no marketplace
+          </span>
+        )}
       </div>
 
       {/* Economia estimada */}

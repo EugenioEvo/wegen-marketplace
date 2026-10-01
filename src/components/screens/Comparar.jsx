@@ -24,7 +24,7 @@ function CompareColumn({ offer, conta, onContact }) {
           <div>
             <div className="text-[15px] font-semibold text-white">{offer.name}</div>
             <div className="text-[12px] text-brand-200">
-              ★ {ratingFmt(offer.rating)} · {offer.reviews}
+              {offer.reviews > 0 ? `★ ${ratingFmt(offer.rating)} · ${offer.reviews}` : 'Nova no marketplace'}
             </div>
           </div>
         </div>
