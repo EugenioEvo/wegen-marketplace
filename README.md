@@ -29,6 +29,11 @@ npm run preview  # serve o build de produção
 
 Sem `.env.local`, o app roda com os dados fictícios locais (nada quebra).
 
+**Produção:** https://wegen-marketplace.vercel.app — deploy automático a cada
+push na `main` deste repositório (GitHub `EugenioEvo/wegen-marketplace` →
+Vercel, projeto `wegen-marketplace`). O `.env.production` commitado traz a URL
+e a chave *publishable* do Supabase (pública por design).
+
 ## Backend (Supabase)
 
 Projeto **wegen-energy** (região `sa-east-1`). O marketplace convive no mesmo
