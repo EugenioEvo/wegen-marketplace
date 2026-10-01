@@ -8,7 +8,15 @@ export default function Logo({ dark = false, height = 34, className = '' }) {
     <img
       src={dark ? logoLight : logoGreen}
       alt="WeGen"
-      style={{ height: height + 'px', width: 'auto', display: 'block' }}
+      style={{
+        height: height + 'px',
+        width: 'auto',
+        display: 'block',
+        // num flex-col, align-items:stretch esticaria o PNG na largura — travar
+        alignSelf: 'flex-start',
+        flex: 'none',
+        objectFit: 'contain',
+      }}
       className={className}
     />
   )
