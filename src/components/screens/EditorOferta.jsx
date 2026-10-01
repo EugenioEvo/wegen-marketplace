@@ -66,7 +66,7 @@ export default function EditorOferta({ nav, offer, onSave }) {
         </span>
         <h1 className="mt-5 text-[26px] font-bold text-brand-900">Oferta salva!</h1>
         <p className="mx-auto mt-3 max-w-[400px] text-[15px] leading-[1.5] text-slate-500">
-          A oferta <strong className="text-brand-600">{name}</strong> foi criada e está{' '}
+          A oferta <strong className="text-brand-600">{name}</strong> foi {isEdit ? 'atualizada' : 'criada'} e está{' '}
           {ativo ? (
             <><strong className="text-green-600">ativa</strong> — já aparece nos resultados da simulação.</>
           ) : (

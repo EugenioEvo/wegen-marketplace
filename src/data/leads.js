@@ -1,10 +1,11 @@
 // Leads fictícios do painel do ofertante (mesmos do protótipo WeGen v2).
+// ids sintéticos: o kanban (drag) e o detalhe dependem de `id` mesmo sem backend
 export const LEADS = [
-  { nome: 'Mariana Santos', dist: 'Equatorial GO', uf: 'GO', conta: 'R$ 480', data: '24 jun', status: 'Novo', kind: 'novo' },
-  { nome: 'Padaria Real', dist: 'CPFL', uf: 'SP', conta: 'R$ 2.100', data: '23 jun', status: 'Em contato', kind: 'contato' },
-  { nome: 'João Pereira', dist: 'Cemig', uf: 'MG', conta: 'R$ 320', data: '22 jun', status: 'Convertido', kind: 'convertido' },
-  { nome: 'Ana Lima', dist: 'Equatorial GO', uf: 'GO', conta: 'R$ 650', data: '21 jun', status: 'Novo', kind: 'novo' },
-  { nome: 'Mercado Bom Preço', dist: 'CPFL', uf: 'SP', conta: 'R$ 3.400', data: '19 jun', status: 'Perdido', kind: 'perdido' },
+  { id: 'mock-1', nome: 'Mariana Santos', dist: 'Equatorial GO', uf: 'GO', conta: 'R$ 480', data: '24 jun', status: 'Novo', kind: 'novo' },
+  { id: 'mock-2', nome: 'Padaria Real', dist: 'CPFL', uf: 'SP', conta: 'R$ 2.100', data: '23 jun', status: 'Em contato', kind: 'contato' },
+  { id: 'mock-3', nome: 'João Pereira', dist: 'Cemig', uf: 'MG', conta: 'R$ 320', data: '22 jun', status: 'Convertido', kind: 'convertido' },
+  { id: 'mock-4', nome: 'Ana Lima', dist: 'Equatorial GO', uf: 'GO', conta: 'R$ 650', data: '21 jun', status: 'Novo', kind: 'novo' },
+  { id: 'mock-5', nome: 'Mercado Bom Preço', dist: 'CPFL', uf: 'SP', conta: 'R$ 3.400', data: '19 jun', status: 'Perdido', kind: 'perdido' },
 ]
 
 // Cores das tags de status (pill) — fundo + texto.
@@ -14,3 +15,4 @@ export const STATUS_TAG = {
   convertido: { background: '#E7F7EF', color: '#0E9457' },
   perdido: { background: '#FDEDED', color: '#C7383C' },
 }
+

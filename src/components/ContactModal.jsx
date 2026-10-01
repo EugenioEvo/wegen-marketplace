@@ -12,8 +12,12 @@ export default function ContactModal({ name, sent, onSubmit, closeContact, close
   const [error, setError] = useState('')
 
   const handleSubmit = async () => {
-    setSubmitting(true)
     setError('')
+    if (!nome.trim()) return setError('Informe seu nome.')
+    if (!telefone.trim() && !email.trim())
+      return setError('Informe um telefone ou e-mail para o ofertante falar com você.')
+    if (!consent) return setError('É preciso autorizar o contato (LGPD) para enviar.')
+    setSubmitting(true)
     try {
       const res = await onSubmit({ nome, telefone, email, consent })
       if (res?.error) setError(res.error)

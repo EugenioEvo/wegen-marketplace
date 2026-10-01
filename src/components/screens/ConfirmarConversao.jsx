@@ -19,6 +19,7 @@ export default function ConfirmarConversao({ nav, token }) {
   }, [token])
 
   const responder = async (confirma) => {
+    if (!isSupabaseConfigured) return
     setSending(true)
     const { data, error } = await supabase.rpc('confirmar_conversao', {
       p_token: token,
