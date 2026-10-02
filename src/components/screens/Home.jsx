@@ -182,7 +182,7 @@ export default function Home({
           </div>
 
           {/* SIMULADOR */}
-          <div className="rounded-[20px] border border-slate-200 bg-white px-[26px] pb-6 pt-[26px] shadow-lg">
+          <div className="glass-strong rounded-[24px] px-[26px] pb-6 pt-[26px]">
             <h3 className="text-[20px] font-semibold text-slate-900">Simule sua economia</h3>
             <p className="mt-1 text-[13px] text-slate-500">Leva menos de 1 minuto.</p>
 
@@ -281,7 +281,7 @@ export default function Home({
           {STEPS.map((s) => (
             <div
               key={s.n}
-              className="rounded-2xl border border-slate-200 bg-white p-[26px] shadow-sm"
+              className="glass glass-hover rounded-2xl p-[26px]"
             >
               <div
                 className={`flex h-11 w-11 items-center justify-center rounded-xl font-display text-[18px] font-bold ${s.badge}`}
@@ -296,7 +296,7 @@ export default function Home({
       </section>
 
       {/* ============ DIFERENCIAIS ============ */}
-      <section className="border-y border-slate-200 bg-slate-50">
+      <section className="border-y border-white/60 bg-white/35 backdrop-blur-[6px]">
         <div className="mx-auto max-w-container px-6 py-16">
           <h2 className="text-center text-[clamp(24px,3.2vw,28px)] font-semibold text-brand-900">
             Por que escolher a WeGen
@@ -305,7 +305,7 @@ export default function Home({
             {FEATURES.map((f) => (
               <div
                 key={f.title}
-                className="flex gap-[14px] rounded-[14px] border border-slate-200 bg-white p-5"
+                className="glass glass-hover flex gap-[14px] rounded-[16px] p-5"
               >
                 <span
                   className={`flex h-[42px] w-[42px] flex-none items-center justify-center rounded-[11px] ${f.iconBg}`}
@@ -334,7 +334,7 @@ export default function Home({
         </div>
         <div className="mt-12 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-[22px]">
           {/* Depoimento 1 */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-[26px] shadow-sm">
+          <div className="glass glass-hover rounded-2xl p-[26px]">
             <div className="text-base tracking-[2px] text-solar-400">★★★★★</div>
             <p className="mt-[14px] text-base leading-[1.55] text-slate-700">
               "Em 10 minutos eu já tinha comparado três ofertas e pedido contato. Estou economizando
@@ -351,7 +351,7 @@ export default function Home({
             </div>
           </div>
           {/* Depoimento 2 */}
-          <div className="rounded-2xl border border-slate-200 bg-white p-[26px] shadow-sm">
+          <div className="glass glass-hover rounded-2xl p-[26px]">
             <div className="text-base tracking-[2px] text-solar-400">★★★★★</div>
             <p className="mt-[14px] text-base leading-[1.55] text-slate-700">
               "Como o gasto de energia da padaria é alto, a economia de 22% fez muita diferença no

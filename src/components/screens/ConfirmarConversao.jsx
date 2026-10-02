@@ -31,7 +31,7 @@ export default function ConfirmarConversao({ nav, token }) {
 
   const Card = ({ children }) => (
     <section className="mx-auto max-w-[460px] px-6 pb-[110px] pt-14">
-      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
+      <div className="glass-strong overflow-hidden rounded-2xl">
         <div className="bg-brand-900 px-7 pb-5 pt-6">
           <span className="text-[13px] font-semibold uppercase tracking-[0.05em] text-brand-200">
             Confirmação de contratação

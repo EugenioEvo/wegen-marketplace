@@ -63,7 +63,7 @@ export default function LeadKanban({ leads, revealed, onMove, onCardClick }) {
             }}
             onDragLeave={() => setOverCol((c) => (c === col.key ? null : c))}
             onDrop={() => handleDrop(col.key)}
-            className={`rounded-2xl border border-t-[3px] border-slate-200 ${col.accent} bg-slate-50 p-3 ${
+            className={`glass rounded-2xl border-t-[3px] ${col.accent} p-3 ${
               overCol === col.key ? 'ring-2 ring-brand-300' : ''
             }`}
           >
@@ -83,7 +83,7 @@ export default function LeadKanban({ leads, revealed, onMove, onCardClick }) {
                   onDragStart={() => setDragId(lead.id)}
                   onDragEnd={() => setDragId(null)}
                   onClick={() => onCardClick(lead)}
-                  className="cursor-pointer rounded-xl border border-slate-200 bg-white p-3 shadow-sm hover:shadow-card-hover"
+                  className="glass-strong glass-hover cursor-pointer rounded-xl p-3"
                 >
                   <div className="text-[14px] font-semibold text-slate-900">{lead.nome}</div>
                   <div className="mt-[2px] text-[12px] text-slate-400">
@@ -125,7 +125,7 @@ export default function LeadKanban({ leads, revealed, onMove, onCardClick }) {
       {/* Prompt de valor / motivo ao mover */}
       {prompt && (
         <div className="fixed inset-0 z-[60] flex items-center justify-center bg-[rgba(20,51,10,.55)] p-5 backdrop-blur-[2px]">
-          <div className="w-full max-w-[400px] rounded-2xl bg-white p-6 shadow-modal">
+          <div className="glass-strong w-full max-w-[400px] rounded-2xl p-6">
             <h3 className="text-[18px] font-semibold text-slate-900">
               {prompt.toStatus === 'convertido' ? 'Marcar como convertido' : 'Marcar como perdido'}
             </h3>

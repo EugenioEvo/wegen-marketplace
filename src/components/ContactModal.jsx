@@ -2,7 +2,7 @@ import { useState } from 'react'
 
 export default function ContactModal({ name, sent, onSubmit, closeContact, closeAndOfertas }) {
   const inputClass =
-    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 px-3 text-[14.5px]'
+    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 bg-white/70 px-3 text-[14.5px]'
 
   const [nome, setNome] = useState('')
   const [telefone, setTelefone] = useState('')
@@ -28,7 +28,7 @@ export default function ContactModal({ name, sent, onSubmit, closeContact, close
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-[rgba(20,51,10,.55)] p-5 backdrop-blur-[2px]">
-      <div className="w-full max-w-[460px] overflow-hidden rounded-[20px] bg-white shadow-modal">
+      <div className="glass-strong w-full max-w-[460px] overflow-hidden rounded-[24px]">
         {!sent && (
           <div className="px-[26px] pb-6 pt-[26px]">
             <div className="flex items-start justify-between">

@@ -85,7 +85,7 @@ export default function MercadoLivre({ nav, onSubmit }) {
   const [sent, setSent] = useState(false)
 
   const inputClass =
-    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 px-3 text-[14.5px]'
+    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 bg-white/70 px-3 text-[14.5px]'
 
   const scrollToForm = () => formRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
 
@@ -185,7 +185,7 @@ export default function MercadoLivre({ nav, onSubmit }) {
         </div>
         <div className="mt-10 grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-[18px]">
           {BENEFITS.map((b) => (
-            <div key={b.title} className="rounded-2xl border border-slate-200 bg-white p-[22px] shadow-sm">
+            <div key={b.title} className="glass glass-hover rounded-2xl p-[22px]">
               <span className="flex h-[46px] w-[46px] items-center justify-center rounded-xl bg-brand-50">
                 {b.icon}
               </span>
@@ -197,7 +197,7 @@ export default function MercadoLivre({ nav, onSubmit }) {
       </section>
 
       {/* QUEM PODE + COMO FUNCIONA */}
-      <section className="border-y border-slate-200 bg-slate-50">
+      <section className="border-y border-white/60 bg-white/35 backdrop-blur-[6px]">
         <div className="mx-auto max-w-container px-6 py-16">
           <div className="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-10">
             <div>
@@ -237,7 +237,7 @@ export default function MercadoLivre({ nav, onSubmit }) {
               </h2>
               <div className="mt-5 grid gap-3">
                 {STEPS.map((s) => (
-                  <div key={s.n} className="flex gap-4 rounded-2xl border border-slate-200 bg-white p-[18px]">
+                  <div key={s.n} className="glass flex gap-4 rounded-2xl p-[18px]">
                     <div className="flex h-10 w-10 flex-none items-center justify-center rounded-xl bg-brand-50 font-display text-[17px] font-bold text-brand-600">
                       {s.n}
                     </div>
@@ -273,7 +273,7 @@ export default function MercadoLivre({ nav, onSubmit }) {
             </div>
           </div>
 
-          <div className="rounded-2xl border border-slate-200 bg-white p-[26px] shadow-md">
+          <div className="glass-strong rounded-2xl p-[26px]">
             {!sent ? (
               <>
                 <div className="grid gap-[13px]">

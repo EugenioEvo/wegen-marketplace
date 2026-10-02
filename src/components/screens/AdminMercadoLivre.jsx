@@ -41,14 +41,14 @@ export default function AdminMercadoLivre({ nav, leads, revealed, onReveal }) {
 
       <div className="mt-[22px] grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
         {cards.map((m) => (
-          <div key={m.label} className="rounded-[14px] border border-slate-200 bg-white p-5 shadow-sm">
+          <div key={m.label} className="glass glass-hover rounded-[16px] p-5">
             <div className="text-[13px] font-semibold text-slate-500">{m.label}</div>
             <div className={`mt-[6px] font-display text-[32px] font-bold ${m.color}`}>{m.value}</div>
           </div>
         ))}
       </div>
 
-      <div className="mt-6 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+      <div className="mt-6 glass-strong overflow-hidden rounded-2xl">
         <div className="overflow-x-auto">
           <table className="w-full min-w-[820px] border-collapse">
             <thead>

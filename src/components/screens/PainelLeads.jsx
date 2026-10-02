@@ -97,7 +97,7 @@ export default function PainelLeads({
       {/* Métricas */}
       <div className="mt-[22px] grid grid-cols-[repeat(auto-fit,minmax(200px,1fr))] gap-4">
         {cards.map((m) => (
-          <div key={m.label} className="rounded-[14px] border border-slate-200 bg-white p-5 shadow-sm">
+          <div key={m.label} className="glass glass-hover rounded-[16px] p-5">
             <div className="text-[13px] font-semibold text-slate-500">{m.label}</div>
             <div className={`mt-[6px] font-display text-[32px] font-bold ${m.valueColor}`}>{m.value}</div>
             <div className="mt-[2px] text-[12.5px] text-slate-400">{m.sub}</div>
@@ -106,7 +106,7 @@ export default function PainelLeads({
       </div>
 
       {/* Carteira de créditos */}
-      <div className="mt-4 flex flex-wrap items-center justify-between gap-4 rounded-2xl border border-brand-100 bg-brand-50 p-5">
+      <div className="mt-4 flex flex-wrap items-center justify-between gap-4 glass rounded-2xl p-5">
         <div>
           <div className="text-[13px] font-semibold text-brand-700">Carteira de créditos</div>
           <div className="mt-1 font-display text-[30px] font-bold leading-none text-brand-600">
@@ -165,7 +165,7 @@ export default function PainelLeads({
 
       {/* Tabela de leads */}
       {tab === 'leads' && (
-        <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div className="mt-4 glass-strong overflow-hidden rounded-2xl">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[760px] border-collapse">
               <thead>
@@ -239,7 +239,7 @@ export default function PainelLeads({
 
       {/* Tabela de ofertas */}
       {tab === 'ofertas' && (
-        <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <div className="mt-4 glass-strong overflow-hidden rounded-2xl">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[680px] border-collapse">
               <thead>

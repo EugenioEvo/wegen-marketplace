@@ -87,7 +87,7 @@ export default function Ofertas({
 
       <div className="mt-6 grid grid-cols-[260px_1fr] items-start gap-7">
         {/* FILTROS */}
-        <aside className="sticky top-[84px] rounded-2xl border border-slate-200 bg-white p-5">
+        <aside className="glass sticky top-[84px] rounded-2xl p-5">
           <h3 className="font-sans text-base font-semibold">Filtros</h3>
 
           <div className="mt-4">

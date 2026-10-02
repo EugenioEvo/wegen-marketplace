@@ -15,7 +15,7 @@ function CompareColumn({ offer, conta, onContact }) {
   ]
 
   return (
-    <div className="min-w-[260px] flex-1 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
+    <div className="glass-strong min-w-[260px] flex-1 overflow-hidden rounded-2xl">
       <div className="bg-brand-600 px-[18px] pb-4 pt-[18px]">
         <div className="flex items-center gap-[10px]">
           <span className="flex h-[38px] w-[38px] items-center justify-center rounded-[10px] bg-white font-display text-[13px] font-bold text-brand-600">

@@ -27,7 +27,7 @@ export default function EditorOferta({ nav, offer, onSave }) {
   const [sent, setSent] = useState(false)
 
   const inputClass =
-    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 px-3 text-[14.5px]'
+    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 bg-white/70 px-3 text-[14.5px]'
 
   const save = async () => {
     setError('')
@@ -108,7 +108,7 @@ export default function EditorOferta({ nav, offer, onSave }) {
         Defina o desconto e a cobertura. Os consumidores verão sua oferta nos resultados da simulação.
       </p>
 
-      <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-[26px] shadow-sm">
+      <div className="glass-strong mt-6 rounded-2xl p-[26px]">
         {/* Nome */}
         <label className="block">
           <span className="text-sm font-semibold text-slate-700">Nome da oferta</span>

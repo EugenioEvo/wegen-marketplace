@@ -3,7 +3,7 @@ import { brl, descPct, ratingFmt } from '../lib/format'
 export default function OfferCard({ offer, conta, faved, compared, onContact, onFav, onCompare }) {
   return (
     <div
-      className={`flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm hover:shadow-card-hover ${
+      className={`glass glass-hover flex flex-col rounded-2xl p-5 ${
         compared ? 'outline outline-2 -outline-offset-1 outline-brand-500' : ''
       }`}
     >

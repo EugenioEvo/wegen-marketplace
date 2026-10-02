@@ -69,7 +69,7 @@ export default function LeadDetail({ lead, revealed, onReveal, onAddNota, fetchI
 
   return (
     <div className="fixed inset-0 z-[60] flex items-center justify-center bg-[rgba(20,51,10,.55)] p-5 backdrop-blur-[2px]">
-      <div className="max-h-[88vh] w-full max-w-[520px] overflow-auto rounded-[20px] bg-white shadow-modal">
+      <div className="glass-strong max-h-[88vh] w-full max-w-[520px] overflow-auto rounded-[24px]">
         <div className="flex items-start justify-between bg-brand-900 px-6 pb-5 pt-6">
           <div>
             <div className="text-[19px] font-bold text-white">{lead.nome}</div>

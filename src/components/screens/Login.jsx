@@ -13,7 +13,7 @@ export default function Login({ nav }) {
   const [info, setInfo] = useState('')
 
   const inputClass =
-    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 px-3 text-[14.5px]'
+    'mt-[6px] h-11 w-full rounded-xl border border-slate-200 bg-white/70 px-3 text-[14.5px]'
 
   const submit = async () => {
     setError('')
@@ -56,7 +56,7 @@ export default function Login({ nav }) {
         ← Voltar ao início
       </button>
 
-      <div className="mt-4 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-md">
+      <div className="glass-strong mt-4 overflow-hidden rounded-2xl">
         <div className="bg-brand-900 px-7 pb-5 pt-6">
           <span className="text-[13px] font-semibold uppercase tracking-[0.05em] text-brand-200">
             Painel do ofertante

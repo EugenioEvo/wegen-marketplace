@@ -10,7 +10,7 @@ export default function Header({ nav, authed, isAdmin, onSignOut }) {
 
   return (
     <header
-      className="sticky top-0 z-40 border-b border-slate-200 bg-white/[0.92] backdrop-blur-[8px] backdrop-saturate-[160%]"
+      className="sticky top-0 z-40 border-b border-slate-200 border-white/60 bg-white/[0.55] backdrop-blur-[18px] backdrop-saturate-[170%]"
     >
       <div className="mx-auto flex h-[68px] max-w-container items-center justify-between gap-4 px-6">
         {/* Logo */}
