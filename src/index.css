@@ -10,12 +10,37 @@
     /* "aurora" WeGen: base clara com manchas verde/dourado fixas — o que faz o
        vidro (blur + translucidez) ter o que refratar nas telas claras */
     background:
-      radial-gradient(900px 600px at 85% -5%, rgba(53, 99, 13, 0.1), transparent 60%),
-      radial-gradient(700px 500px at -10% 30%, rgba(251, 169, 25, 0.09), transparent 60%),
-      radial-gradient(800px 600px at 60% 110%, rgba(21, 184, 106, 0.08), transparent 60%),
-      #f4f8f1;
+      radial-gradient(1000px 650px at 85% -5%, rgba(53, 99, 13, 0.28), transparent 62%),
+      radial-gradient(800px 550px at -12% 28%, rgba(251, 169, 25, 0.26), transparent 62%),
+      radial-gradient(900px 650px at 62% 112%, rgba(21, 184, 106, 0.22), transparent 62%),
+      radial-gradient(500px 400px at 35% 55%, rgba(166, 195, 130, 0.18), transparent 65%),
+      linear-gradient(160deg, #f2f7ec 0%, #eef4f6 50%, #f5f3ea 100%);
     background-attachment: fixed;
     -webkit-font-smoothing: antialiased;
+  }
+  /* Orbes de luz fixos — reforçam a leitura de profundidade atrás do vidro */
+  body::before,
+  body::after {
+    content: '';
+    position: fixed;
+    z-index: -1;
+    border-radius: 9999px;
+    filter: blur(70px);
+    pointer-events: none;
+  }
+  body::before {
+    width: 420px;
+    height: 420px;
+    top: 12%;
+    right: -120px;
+    background: radial-gradient(circle, rgba(251, 169, 25, 0.35), transparent 70%);
+  }
+  body::after {
+    width: 520px;
+    height: 520px;
+    bottom: -140px;
+    left: -140px;
+    background: radial-gradient(circle, rgba(53, 99, 13, 0.32), transparent 70%);
   }
   /* Headings default to Poppins; individual headings opt back into Inter
      with `font-sans` where the design calls for it. */
@@ -45,19 +70,19 @@
 @layer components {
   /* Vidro padrão — cartões sobre fundo claro */
   .glass {
-    background: rgba(255, 255, 255, 0.62);
-    -webkit-backdrop-filter: blur(16px) saturate(160%);
-    backdrop-filter: blur(16px) saturate(160%);
-    border: 1px solid rgba(255, 255, 255, 0.65);
-    box-shadow: 0 8px 32px rgba(20, 51, 10, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+    background: rgba(255, 255, 255, 0.42);
+    -webkit-backdrop-filter: blur(18px) saturate(170%);
+    backdrop-filter: blur(18px) saturate(170%);
+    border: 1px solid rgba(255, 255, 255, 0.75);
+    box-shadow: 0 8px 32px rgba(20, 51, 10, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.9);
   }
   /* Vidro forte — painéis que carregam conteúdo denso (simulador, modais, tabelas) */
   .glass-strong {
-    background: rgba(255, 255, 255, 0.82);
-    -webkit-backdrop-filter: blur(22px) saturate(170%);
-    backdrop-filter: blur(22px) saturate(170%);
-    border: 1px solid rgba(255, 255, 255, 0.7);
-    box-shadow: 0 16px 48px rgba(20, 51, 10, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.66);
+    -webkit-backdrop-filter: blur(26px) saturate(180%);
+    backdrop-filter: blur(26px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: 0 16px 48px rgba(20, 51, 10, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.95);
   }
   /* Vidro escuro — sobre o hero verde-escuro e barras fixas */
   .glass-dark {
